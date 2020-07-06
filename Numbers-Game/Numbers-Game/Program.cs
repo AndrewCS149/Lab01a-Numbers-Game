@@ -21,13 +21,18 @@ namespace Numbers_Game
             int[] emptyArr = new int[num];
 
             // Begin Sequence
+
+            // create and fill array
             int[] filledArr = Populate(emptyArr);
 
+            // get sum of 'filledArr'
             int sum = GetSum(filledArr);
 
-            GetProduct(filledArr, sum);
+            // get product from 'sum' and 'filledArr' 
+            int product = GetProduct(filledArr, sum);
 
-            //GetQuotient();
+            // get quotient of 'product' and user generated value
+            GetQuotient(product);
         }
 
         // A method to generate the contents within the array defined in 'StartSequence()'
@@ -77,20 +82,42 @@ namespace Numbers_Game
                 Console.Write($"Please enter a number between 1 and {arr.Length}: ");
                 string userInput = Console.ReadLine();
                 num = Convert.ToInt32(userInput);
-                product = arr[num] * sum;
+                product = arr[num - 1] * sum;
             }
             catch (IndexOutOfRangeException e)
             {
-                Console.WriteLine(e.Message);
-                throw e;
-            }
-            catch (FormatException e)
-            {
-                Console.WriteLine(e.Message);
                 throw e;
             }
 
             return product;
+        }
+
+        // A method to get the quotient with the GetProduct() result as the dividend
+        // and a user generated value as the divisor. 
+        // Return the quotient
+        static decimal GetQuotient(int product)
+        {
+            int divisor;
+            decimal quotient;
+            try
+            {
+                // Get the divisor from the user and store in 'divisor' var.
+                Console.Write($"Please enter a number to divide your product {product} by: ");
+                string userInput = Console.ReadLine();
+
+                // convert user input to integer
+                divisor = Convert.ToInt32(userInput);
+
+                // get quotient of product and divisor
+                quotient = decimal.Divide(product, divisor);
+            }
+            catch (DivideByZeroException e)
+            {
+                Console.WriteLine($"Error: {e.Message}");
+                quotient = 0;
+            }
+
+            return quotient;
         }
     }
 }

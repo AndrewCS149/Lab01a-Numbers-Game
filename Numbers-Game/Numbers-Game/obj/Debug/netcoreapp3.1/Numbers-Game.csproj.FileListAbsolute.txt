@@ -1,0 +1,13 @@
+C:\Users\andre\Desktop\code\codeFellows\code401\labs\Lab01a-Numbers-Game\Numbers-Game\Numbers-Game\bin\Debug\netcoreapp3.1\Numbers-Game.exe
+C:\Users\andre\Desktop\code\codeFellows\code401\labs\Lab01a-Numbers-Game\Numbers-Game\Numbers-Game\bin\Debug\netcoreapp3.1\Numbers-Game.deps.json
+C:\Users\andre\Desktop\code\codeFellows\code401\labs\Lab01a-Numbers-Game\Numbers-Game\Numbers-Game\bin\Debug\netcoreapp3.1\Numbers-Game.runtimeconfig.json
+C:\Users\andre\Desktop\code\codeFellows\code401\labs\Lab01a-Numbers-Game\Numbers-Game\Numbers-Game\bin\Debug\netcoreapp3.1\Numbers-Game.runtimeconfig.dev.json
+C:\Users\andre\Desktop\code\codeFellows\code401\labs\Lab01a-Numbers-Game\Numbers-Game\Numbers-Game\bin\Debug\netcoreapp3.1\Numbers-Game.dll
+C:\Users\andre\Desktop\code\codeFellows\code401\labs\Lab01a-Numbers-Game\Numbers-Game\Numbers-Game\bin\Debug\netcoreapp3.1\Numbers-Game.pdb
+C:\Users\andre\Desktop\code\codeFellows\code401\labs\Lab01a-Numbers-Game\Numbers-Game\Numbers-Game\obj\Debug\netcoreapp3.1\Numbers-Game.csprojAssemblyReference.cache
+C:\Users\andre\Desktop\code\codeFellows\code401\labs\Lab01a-Numbers-Game\Numbers-Game\Numbers-Game\obj\Debug\netcoreapp3.1\Numbers-Game.AssemblyInfoInputs.cache
+C:\Users\andre\Desktop\code\codeFellows\code401\labs\Lab01a-Numbers-Game\Numbers-Game\Numbers-Game\obj\Debug\netcoreapp3.1\Numbers-Game.AssemblyInfo.cs
+C:\Users\andre\Desktop\code\codeFellows\code401\labs\Lab01a-Numbers-Game\Numbers-Game\Numbers-Game\obj\Debug\netcoreapp3.1\Numbers-Game.csproj.CoreCompileInputs.cache
+C:\Users\andre\Desktop\code\codeFellows\code401\labs\Lab01a-Numbers-Game\Numbers-Game\Numbers-Game\obj\Debug\netcoreapp3.1\Numbers-Game.dll
+C:\Users\andre\Desktop\code\codeFellows\code401\labs\Lab01a-Numbers-Game\Numbers-Game\Numbers-Game\obj\Debug\netcoreapp3.1\Numbers-Game.pdb
+C:\Users\andre\Desktop\code\codeFellows\code401\labs\Lab01a-Numbers-Game\Numbers-Game\Numbers-Game\obj\Debug\netcoreapp3.1\Numbers-Game.genruntimeconfig.cache

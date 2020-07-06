@@ -6,7 +6,16 @@ namespace Numbers_Game
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
+            StartSequence();
+        }
+
+        static void StartSequence()
+        {
+            Console.Write("Please enter a number greather than zero: ");
+            int num = Convert.ToInt32(Console.ReadLine());
+
+
         }
     }
 }

@@ -127,7 +127,7 @@ namespace Numbers_Game
                 quotient = 0;
             }
 
-            Console.WriteLine(quotient);
+            Console.WriteLine($"Quotient: {quotient}");
             return quotient;
         }
     }

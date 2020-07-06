@@ -48,7 +48,8 @@ namespace Numbers_Game
                 string userInput = Console.ReadLine();
 
                 // Store in array
-                arr[i - 1] = Convert.ToInt32(userInput);
+                //arr[i - 1] = Convert.ToInt32(userInput);
+                arr[i - 1] = Int32.Parse(userInput);
             }
 
             return arr;
@@ -88,6 +89,10 @@ namespace Numbers_Game
             {
                 throw e;
             }
+            catch (FormatException e)
+            {
+                throw e;
+            }
 
             return product;
         }
@@ -116,7 +121,13 @@ namespace Numbers_Game
                 Console.WriteLine($"Error: {e.Message}");
                 quotient = 0;
             }
+            catch (FormatException e)
+            {
+                Console.WriteLine($"Error: {e.Message}");
+                quotient = 0;
+            }
 
+            Console.WriteLine(quotient);
             return quotient;
         }
     }

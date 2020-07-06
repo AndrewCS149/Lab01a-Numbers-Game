@@ -6,7 +6,7 @@ namespace Numbers_Game
     {
         static void Main(string[] args)
         {
-
+            // Begin application
             StartSequence();
         }
 

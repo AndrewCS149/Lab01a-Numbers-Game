@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Security.Cryptography;
 
 namespace Numbers_Game
 {
@@ -24,9 +23,9 @@ namespace Numbers_Game
             // Begin Sequence
             int[] filledArr = Populate(emptyArr);
 
-            GetSum(filledArr);
+            int sum = GetSum(filledArr);
 
-            //GetProduct();
+            GetProduct(filledArr, sum);
 
             //GetQuotient();
         }
@@ -61,9 +60,37 @@ namespace Numbers_Game
             }
 
             if (sum < 20)
-                throw new Exception($"Value of {sum} is too low."));
+                throw new Exception($"Value of {sum} is too low.");
 
             return sum;
+        }
+
+        // A method to find the product of the user input and the length of the
+        // passed in array.
+        // Return the product
+        static int GetProduct(int[] arr, int sum)
+        {
+            int num;
+            int product;
+            try
+            {
+                Console.Write($"Please enter a number between 1 and {arr.Length}: ");
+                string userInput = Console.ReadLine();
+                num = Convert.ToInt32(userInput);
+                product = arr[num] * sum;
+            }
+            catch (IndexOutOfRangeException e)
+            {
+                Console.WriteLine(e.Message);
+                throw e;
+            }
+            catch (FormatException e)
+            {
+                Console.WriteLine(e.Message);
+                throw e;
+            }
+
+            return product;
         }
     }
 }

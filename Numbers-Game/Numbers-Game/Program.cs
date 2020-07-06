@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Cryptography;
 
 namespace Numbers_Game
 {
@@ -18,12 +19,12 @@ namespace Numbers_Game
             int num = Convert.ToInt32(Console.ReadLine());
 
             // Create an arr the length of the user input
-            int[] numArr = new int[num];
+            int[] emptyArr = new int[num];
 
             // Begin Sequence
-            Populate(numArr);
+            int[] filledArr = Populate(emptyArr);
 
-            //GetSum(numArr);
+            GetSum(filledArr);
 
             //GetProduct();
 
@@ -47,6 +48,22 @@ namespace Numbers_Game
             }
 
             return arr;
+        }
+
+        // A method to find the sum of the passed in array
+        // Return the sum 
+        static int GetSum(int[] arr)
+        {
+            int sum = 0;
+            foreach (int num in arr)
+            {
+                sum += num;
+            }
+
+            if (sum < 20)
+                throw new Exception($"Value of {sum} is too low."));
+
+            return sum;
         }
     }
 }

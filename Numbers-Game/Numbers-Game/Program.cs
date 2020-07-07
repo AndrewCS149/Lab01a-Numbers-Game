@@ -6,6 +6,9 @@ namespace Numbers_Game
     {
         static void Main(string[] args)
         {
+            // Greet user
+            Console.WriteLine("Welcome to my game! Let's do some math!");
+
             // Begin application
             StartSequence();
         }
@@ -14,7 +17,7 @@ namespace Numbers_Game
         static void StartSequence()
         {
             // Request int from user and store in a variable
-            Console.Write("Please enter a number greather than zero: ");
+            Console.Write("Please enter a number greater than zero: ");
             int num = Convert.ToInt32(Console.ReadLine());
 
             // Create an arr the length of the user input

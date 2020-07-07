@@ -31,7 +31,7 @@ namespace Numbers_Game
             try
             {
                 // Request int from user and store in a variable
-                Console.WriteLine("Please enter a number greater than zero: ");
+                Console.WriteLine("Please enter a number greater than zero");
                 int num = Convert.ToInt32(Console.ReadLine());
 
                 // Create an arr the length of the user input
@@ -72,7 +72,7 @@ namespace Numbers_Game
             for (int i = 1; i <= arr.Length; i++)
             {
                 // Gather user input
-                Console.WriteLine($"Please enter number: {i} of {arr.Length}: ");
+                Console.WriteLine($"Please enter number: {i} of {arr.Length}");
                 string userInput = Console.ReadLine();
 
                 // Store in array
@@ -107,7 +107,7 @@ namespace Numbers_Game
             int product;
             try
             {
-                Console.WriteLine($"Please enter a number between 1 and {arr.Length}: ");
+                Console.WriteLine($"Please enter a number between 1 and {arr.Length}");
                 string userInput = Console.ReadLine();
                 num = Convert.ToInt32(userInput);
                 product = arr[num - 1] * sum;
@@ -130,7 +130,7 @@ namespace Numbers_Game
             try
             {
                 // Get the divisor from the user and store in 'divisor' var.
-                Console.WriteLine($"Please enter a number to divide your product {product} by: ");
+                Console.WriteLine($"Please enter a number to divide your product {product} by");
                 string userInput = Console.ReadLine();
 
                 // convert user input to integer

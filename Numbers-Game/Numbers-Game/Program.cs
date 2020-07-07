@@ -11,6 +11,9 @@ namespace Numbers_Game
 
             // Begin application
             StartSequence();
+
+            // Terminate application
+            Console.WriteLine("Program is complete.");
         }
 
         // A method to begin the application by calling all other methods
@@ -35,7 +38,9 @@ namespace Numbers_Game
             int product = GetProduct(filledArr, sum);
 
             // get quotient of 'product' and user generated value
-            GetQuotient(product);
+            decimal quotient = GetQuotient(product);
+
+            Results(filledArr, sum, product, quotient);
         }
 
         // A method to generate the contents within the array defined in 'StartSequence()'
@@ -51,7 +56,6 @@ namespace Numbers_Game
                 string userInput = Console.ReadLine();
 
                 // Store in array
-                //arr[i - 1] = Convert.ToInt32(userInput);
                 arr[i - 1] = Int32.Parse(userInput);
             }
 
@@ -130,8 +134,17 @@ namespace Numbers_Game
                 quotient = 0;
             }
 
-            Console.WriteLine($"Quotient: {quotient}");
             return quotient;
+        }
+
+        // A method to display all of the results to the user
+        static void Results(int[] arr, int sum, int product, decimal quotient)
+        {
+            Console.WriteLine($"Your array size is: {arr.Length}");
+            Console.WriteLine($"The numbers in the array are {String.Join(", ", arr)}");
+            Console.WriteLine($"The sum of the array is {sum}");
+            Console.WriteLine($"{sum} * {product / sum} = {product}");
+            Console.WriteLine($"{product} / {product / quotient} = {quotient}");
         }
     }
 }

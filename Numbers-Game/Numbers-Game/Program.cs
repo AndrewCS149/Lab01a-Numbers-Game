@@ -6,41 +6,61 @@ namespace Numbers_Game
     {
         static void Main(string[] args)
         {
-            // Greet user
-            Console.WriteLine("Welcome to my game! Let's do some math!");
 
             // Begin application
-            StartSequence();
-
-            // Terminate application
-            Console.WriteLine("Program is complete.");
+            try
+            {
+                // Greet user
+                Console.WriteLine("Welcome to my game! Let's do some math!");
+                StartSequence();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"Oops! Something went wrong. {e.Message}");
+            }
+            finally
+            {
+                // Terminate application
+                Console.WriteLine("Program is complete.");
+            }
         }
 
         // A method to begin the application by calling all other methods
         static void StartSequence()
         {
-            // Request int from user and store in a variable
-            Console.Write("Please enter a number greater than zero: ");
-            int num = Convert.ToInt32(Console.ReadLine());
+            try
+            {
+                // Request int from user and store in a variable
+                Console.WriteLine("Please enter a number greater than zero: ");
+                int num = Convert.ToInt32(Console.ReadLine());
 
-            // Create an arr the length of the user input
-            int[] emptyArr = new int[num];
+                // Create an arr the length of the user input
+                int[] emptyArr = new int[num];
 
-            // Begin Sequence
+                // Begin Sequence
 
-            // create and fill array
-            int[] filledArr = Populate(emptyArr);
+                // create and fill array
+                int[] filledArr = Populate(emptyArr);
 
-            // get sum of 'filledArr'
-            int sum = GetSum(filledArr);
+                // get sum of 'filledArr'
+                int sum = GetSum(filledArr);
 
-            // get product from 'sum' and 'filledArr' 
-            int product = GetProduct(filledArr, sum);
+                // get product from 'sum' and 'filledArr' 
+                int product = GetProduct(filledArr, sum);
 
-            // get quotient of 'product' and user generated value
-            decimal quotient = GetQuotient(product);
+                // get quotient of 'product' and user generated value
+                decimal quotient = GetQuotient(product);
 
-            Results(filledArr, sum, product, quotient);
+                Results(filledArr, sum, product, quotient);
+            }
+            catch (FormatException e)
+            {
+                Console.WriteLine($"Oops! Something went wrong. {e.Message}");
+            }
+            catch (OverflowException e)
+            {
+                Console.WriteLine($"Oops! Something went wrong. {e.Message}");
+            }
         }
 
         // A method to generate the contents within the array defined in 'StartSequence()'
@@ -52,7 +72,7 @@ namespace Numbers_Game
             for (int i = 1; i <= arr.Length; i++)
             {
                 // Gather user input
-                Console.Write($"Please enter number: {i} of {arr.Length}: ");
+                Console.WriteLine($"Please enter number: {i} of {arr.Length}: ");
                 string userInput = Console.ReadLine();
 
                 // Store in array
@@ -87,16 +107,12 @@ namespace Numbers_Game
             int product;
             try
             {
-                Console.Write($"Please enter a number between 1 and {arr.Length}: ");
+                Console.WriteLine($"Please enter a number between 1 and {arr.Length}: ");
                 string userInput = Console.ReadLine();
                 num = Convert.ToInt32(userInput);
                 product = arr[num - 1] * sum;
             }
             catch (IndexOutOfRangeException e)
-            {
-                throw e;
-            }
-            catch (FormatException e)
             {
                 throw e;
             }
@@ -114,7 +130,7 @@ namespace Numbers_Game
             try
             {
                 // Get the divisor from the user and store in 'divisor' var.
-                Console.Write($"Please enter a number to divide your product {product} by: ");
+                Console.WriteLine($"Please enter a number to divide your product {product} by: ");
                 string userInput = Console.ReadLine();
 
                 // convert user input to integer
@@ -124,11 +140,6 @@ namespace Numbers_Game
                 quotient = decimal.Divide(product, divisor);
             }
             catch (DivideByZeroException e)
-            {
-                Console.WriteLine($"Error: {e.Message}");
-                quotient = 0;
-            }
-            catch (FormatException e)
             {
                 Console.WriteLine($"Error: {e.Message}");
                 quotient = 0;
